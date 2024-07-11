@@ -35,14 +35,42 @@
 						</header>
 							<img src="images/Couch.jpg" alt="Cat sofa" class="center"> <br />
 							<br />
-							I am always looking for ways to spoil my cats. While browsing on Amazon I came across this super cool cat couch (<a href="https://www.amazon.ca/Washable-Medium-Durable-Non-Slip-26%C3%9719%C3%9713/dp/B0C5DMLPNC/ref=cm_cr_arp_d_product_top?ie=UTF8">link</a>). So for this project I gathered the data on the customer reviews. And I will create a simple dashboard to display the informtation I've gathered once I have cleaned it. 
+							I am always looking for ways to spoil my cats. While browsing on Amazon I came across this super cool cat couch (<a href="https://www.amazon.ca/Washable-Medium-Durable-Non-Slip-26%C3%9719%C3%9713/dp/B0C5DMLPNC/ref=cm_cr_arp_d_product_top?ie=UTF8">link</a>). So for this project I gathered the data on the customer reviews. And I will create a simple dashboard to display the informtation I've gathered once I have cleaned it. <br />
+							<br />
 							<figure>
                                 <figcaption><b>There are three parts to my project (and a bonus part):</b></figcaption>
                                 <ol>
-                                    <li>Web Scraping <i>(Python)</i></li>
-									<li>Data Cleaning <i>(Excel)</i></li>
-                                	<li>Data Visualization <i>(Tableau)</i></li>
-									<li><i>Bonus Part:</i> EDA on Text Sentiment <i>(R)</i></li>
+                                    <li><a href="https://github.com/johannaschmidle/PortfolioProjects/blob/main/CatCouchScrape.ipynb"> Web scraping</a> <i>(Python)</i> <br />
+										In python I used BeautifulSoup and Selenium to login to Amazon, parse through the review pages and collect the revivew information. I also added a sentiment column based on the review text.
+									</li>
+									<br />
+										<li>
+											<a href="https://www.kaggle.com/datasets/johannaschmidle7/cat-couch-review/data"> Data cleaning</a> <i>(Excel)</i>  (Link takes you to cleaned dataset)<br />
+											I cleaned the dataset from Part 1 in Excel and it now has the following information:
+											<ul>
+												<li><b>Reviewer Name:</b> The username of the person leaving the review</li>   
+												<li><b>Title:</b> The title of the review</li>      
+												<li><b>Colour Name:</b> The colour the cat couch was purchased in</li>  
+												<li><b>Rating:</b> The rating given by the reviewer (out of 5 stars)</li>
+												<li><b>Review Location:</b> The country where the reviewer is located</li>
+												<li><b>Review Date:</b> Date the review was posted (yyyy-mm-dd)</li>
+												<li><b>Review Text:</b> The text description of the review</li>
+												<li><b>Sentiment:</b> The sentiment of the review text</li>                                                           
+											</ul>
+											This dataset can be used in a variety of ways. Whether you're interested in natural language processing, sentiment analysis, product recommendations, or market research, this dataset can be a valuable resource.
+										</li>
+										<br />
+										<li>
+											<a href="https://public.tableau.com/app/profile/johanna.schmidle/viz/CatCouchDash/Dashboard1"> Data Visualization</a> <i>(Tableau)</i><br />
+											I have created a very simple dashboard in Tableau. <br />
+											<br />
+											<img src="images/fulls/CatCouchDash.png" alt="Cat Couch Dashboard" width="700" height="790">
+										</li>
+										<br />
+										<li>
+											<b>Bonus Part:</b> <a href = "https://www.kaggle.com/code/johannaschmidle7/cat-couch-reviews-sentiment-analysis">Simple EDA on Text Sentiment</a> <i>(R)</i> <br />
+											Very simple EDA on text and sentiment. This is similar to my EDA from my UFO project.
+										</li>
                                 </ol>
                             </figure>
 							
@@ -50,47 +78,9 @@
 
 						</p>
 					</section>
-
-                <!-- Two -->
-					<section id="two">
-						<ul>
-							<li>
-								<b>Part 1:</b><a href="https://github.com/johannaschmidle/PortfolioProjects/blob/main/CatCouchScrape.ipynb"> Web scraping</a> <br />
-								In python I used BeautifulSoup and Selenium to login to Amazon, parse through the review pages and collect the revivew information. I also added a sentiment column based on the review text.
-							</li>
-							<br />
-							<li>
-								<b>Part 2:</b><a href="https://www.kaggle.com/datasets/johannaschmidle7/cat-couch-review/data"> Data cleaning</a> (Link takes you to cleaned dataset)<br />
-								I cleaned the dataset from Part 1 in Excel and it now has the following information:
-								<ul>
-									<li><b>Reviewer Name:</b> The username of the person leaving the review</li>   
-									<li><b>Title:</b> The title of the review</li>      
-									<li><b>Colour Name:</b> The colour the cat couch was purchased in</li>  
-									<li><b>Rating:</b> The rating given by the reviewer (out of 5 stars)</li>
-									<li><b>Review Location:</b> The country where the reviewer is located</li>
-									<li><b>Review Date:</b> Date the review was posted (yyyy-mm-dd)</li>
-									<li><b>Review Text:</b> The text description of the review</li>
-									<li><b>Sentiment:</b> The sentiment of the review text</li>                                                           
-								</ul>
-								This dataset can be used in a variety of ways. Whether you're interested in natural language processing, sentiment analysis, product recommendations, or market research, this dataset can be a valuable resource.
-							</li>
-							<br />
-							<li>
-								<b>Part 3:</b><a href="https://public.tableau.com/app/profile/johanna.schmidle/viz/CatCouchDash/Dashboard1"> Data Visualization</a> <br />
-								I have created a very simple dashboard in Tableau. <br />
-								<br />
-								<img src="images/fulls/CatCouchDash.png" alt="Cat Couch Dashboard" width="700" height="790">
-							</li>
-							<br />
-							<li>
-								<b>Part 4</b> <a href = "https://www.kaggle.com/code/johannaschmidle7/cat-couch-reviews-sentiment-analysis">Simple EDA on Text Sentiment</a> <br />
-								Very simple EDA on text and sentiment. This is similar to my EDA from my UFO project.
-							</li>
-						</ul>
-					</section>
 				
-				<!-- Three -->
-				<section id="three">
+				<!-- Two -->
+				<section id="two">
 					<h2>My Cats</h2>
 					For those who are interested, here are photos of my cats who inspired this project. Their names and Chevy and Bunny and they are sisters. They are very nosy, and they love belly rubs. 
 					<br />
@@ -108,6 +98,7 @@
 					<ul class="icons">
 						<li><a href="https://www.kaggle.com/johannaschmidle7" class="icon brands fa-kaggle"><span class="label">Kaggle</span></a></li>
 						<li><a href="https://github.com/johannaschmidle" class="icon brands fa-github"><span class="label">Github</span></a></li>
+						<li><a href="https://ca.linkedin.com/in/johanna-schmidle-64b840310" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>						
 						<li><a href="mailto:johannaschmidle7@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
 					</ul>
 					<ul class="copyright">
