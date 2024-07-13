@@ -18,7 +18,7 @@
 				<div class="inner">
 					<a class="image avatar"><img src="images/avatars/pic10.jpg" alt="avatar" /></a>
 					<h1><strong>Johanna Schmidle</strong> <br />
-					Lover of binge worthy TV :)
+					Guilty of binge watching <br /> from time to time
 					</h1>
 				</div>
 			</header>
@@ -29,19 +29,28 @@
 				<!-- One -->
 					<section id="one">
 						<header class="major">
-							<h2>Netflix Subscription Analysis (2021 - 2023)</h2>
-							<h3>Subtitle</h3>
+							<h2>Netflix Subscription Analysis</h2>
+							<h3>Analyzing Netflix subscription trends from 2021 - 2023</h3>
 							<p> Link to project repository on <a href="https://github.com/johannaschmidle/Netflix-Subscription-Analysis?tab=readme-ov-file">GitHub</a> 
 						</header>
-						<p> Analyzing Netflix subscription trends from 2021 - 2023. <br />
-							<br />
+						<p> 
+							<b>Goal:</b> Market Analysis. Understanding Netflix subscription trends can provide valuable insights into market behavior, helping to predict future industry patterns and consumer preferences. <br />
+							
+							<h4>Metrics and Dimensions</h4>
+							<ul>
+								<li><strong>Total Subscriptions:</strong> total subscription sales from all plan types</li>
+								<li><strong>Plan Type:</strong> Basic, Premium, and Standard</li>
+								<li><strong>Country:</strong> Australia, Brazil, Canada, France, Germany, Italy, Mexico, Spain, UK, and US</li>
+								<li><strong>Plan Device:</strong> Device on which the subscription will be used. Laptop, Smart TV, Smartphone, and Tablet</li>
+							</ul>
 							<b>This project has two parts:</b>
 							<ul>
 								<li>
-									Part 1:<a href="#"> General Data Cleaning in SQL</a> 
+									Part 1:<a href="https://github.com/johannaschmidle/Netflix-Subscription-Analysis/blob/main/NetflixSubsCleaning.sql"> General Data Cleaning in SQL</a> 
 								</li>
 								<li>
 									Part 2:<a href="https://public.tableau.com/app/profile/johanna.schmidle/viz/NetflixSubscriptionsDash/Dashboard1?publish=yes"> Interactive Dashboard</a>
+									<img src="images/fulls/NetflixSubscriptions.png" alt="netflix Subscriptions Dashboard" width="700"> <br />
 								</li>
 							</ul>
 						</p>
@@ -49,11 +58,29 @@
 
                 <!-- Two -->
 				<section id="two">
-							<h3>Netflix Subscription Dashboard</h3>
-							<img src="images/fulls/NetflixSubscriptions.png" alt="netflix Subscriptions Dashboard" width="700"> <br />
-							If you wish to take a closer look at the excel file and use the dashboard, you can download the .xlsx file <a href="#"> here.</a> 
+						<h3>Summary of Findings</h3>
+						<h4>Plan Type:</h4>
+						<ul>
+							<li>Basic plans are the most popular plan.</li>
+							<li>Near the end of June 2022 all plan types saw a significant spike and the basic plan type hit a high of $811.00. These spikes significantly decreased until the end of October 2022 when all plan types spiked again, and Premium and Standard plan types hit highs of $576.00 and $727.00 respectively.</li>
+							<li>All plan types seemed to drop off after this second spike completely.</li>
+						</ul>
+						<h4>Plan Country:</h4>
+						<ul>
+							<li>Spain and the US are the top two countries with subscription totals of $5,664 and $5,662 respectively.</li>
+							<li>Most countries followed the same spike and decrease pattern as the plan types (spikes in June 2022 and late October 2022) except France which hit its high in August 2022, and Germany which hit its high at the beginning of October 2022.</li>
+						</ul>
+						<h4>Plan Device:</h4>
+						<ul>
+							<li>All four devices are evenly popular for Netflix Subscriptions, each getting a total of around $7,700.</li>
+							<li>The devices followed the same spike and decrease pattern as the other two graphs (spikes in June 2022 and late October 2022) with Smartphones and Tablets peaking in June, and Smart TVs and Laptops peaking in October.</li>
+						</ul>
+						<h3>Recommended Next Steps</h2>
+						<ul>
+							<li>Investigate why the people aren't joining in the months between June and October</li>
+							<li>Certain countries make up larger percentages of new subscriptions during different times of year, investigate why this may be the case.</li>
+						</ul>
 							<br />
-
 				</section>
 
                 <!-- Three -->
@@ -62,16 +89,16 @@
 						<p> <b>Database:</b><a href="https://www.kaggle.com/datasets/arnavsmayan/netflix-userbase-dataset"> https://www.kaggle.com/datasets/arnavsmayan/netflix-userbase-dataset</a> <br />
                             The dataset provides a snapshot of a sample Netflix userbase. It has the following columns:
                             <ul>
-                                <li><b>User ID:</b> </li>   
-                                <li><b>Subscription Type:</b> </li>      
-                                <li><b>Monthly Revenue:</b> </li>
-                                <li><b>Join Date:</b> </li>
-                                <li><b>Last Payment Date:</b> </li>
-                                <li><b>Country:</b> </li>
-                                <li><b>Age:</b> </li>
-                                <li><b>Gender:</b> </li>  
-								<li><b>Device:</b> </li>
-                                <li><b>Plan Duration:</b> </li>                                                                              
+                                <li><b>User ID:</b> the ID of the user</li>   
+                                <li><b>Subscription Type:</b> Basic, Premium, and Standard </li>      
+                                <li><b>Monthly Revenue:</b> The amount of revenue from the users subscription(s)</li>
+                                <li><b>Join Date:</b> The date the user subscribed</li>
+                                <li><b>Last Payment Date:</b> The last time the user paid</li>
+                                <li><b>Country:</b> The country the user is in</li>
+                                <li><b>Age:</b> The age of the user </li>
+                                <li><b>Gender:</b> The gender of the user </li>  
+								<li><b>Device:</b> The device the subscription will be used. Laptop, Smart TV, Smartphone, and Tablet </li>
+                                <li><b>Plan Duration:</b> The duration of the plan the user selected </li>                                                                              
                             </ul>
                         </p>
 					</section>
@@ -84,7 +111,7 @@
 					<ul class="icons">
 						<li><a href="https://www.kaggle.com/johannaschmidle7" class="icon brands fa-kaggle"><span class="label">Kaggle</span></a></li>
 						<li><a href="https://github.com/johannaschmidle" class="icon brands fa-github"><span class="label">Github</span></a></li>
-						<li><a href="https://ca.linkedin.com/in/johanna-schmidle-64b840310" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+												<li><a href="https://ca.linkedin.com/in/johanna-schmidle-64b840310" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
 						<li><a href="mailto:johannaschmidle7@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
 					</ul>
 					<ul class="copyright">

@@ -31,43 +31,99 @@
 					<section id="one">
 						<header class="major">
 							<h2>Analyzing Road Collision Data (2019-2022)</h2>
-							<h3>Subtitle</h3>
+							<h3>Understanding Accident Severity for Effective Road Management</h3>
 							<p> Link to project repository on <a href="https://github.com/johannaschmidle/Road-Collisions-Project">GitHub</a> 
 						</header>
-						<p>Intro 
-							
+						<p>  <b>Goal:</b> Gain insights into the patterns and trends of road accidents in the UK from 2019 to 2022 to inform policy-making and improve road safety.   
+							<h4>Metrics and Dimensions</h4>
+							<ul>
+								<li><strong>Total:</strong> number of accidents</li>
+								<li><strong>Accident Severity:</strong> Accidents and percentage of total with respect to accident severity</li>
+								<li><strong>Vehicle:</strong> Total accidents by type of vehicle</li>
+								<li><strong>Accidents per Year:</strong> Monthly trend showing a comparison of accidents for the current year and the previous year</li>
+								<li><strong>Road Type:</strong> accidents by road type</li>
+								<li><strong>Light Condition:</strong> accidents by day/night</li>
+								<li><strong>Road Condition:</strong> Distribution of total casualties by road condition</li>
+								<li><strong>Location/Area:</strong> The type of area where the collision takes place</li>
+								<li>Relationship between accidents by area/location and by day/night</li>
+							</ul>	
+							<img src="images/fulls/AccidentDashSC.png" alt="Road Collision Dashboard" width="750" height="345">
+							If you wish to take a closer look at the excel file and use the dashboard, you can download the .xlsx file <a href="#"> here.</a> 
 						</p>
 					</section>
-
-                <!-- Two -->
+				
+				<!-- Two -->
 				<section id="two">
-							<h3>Road Accident Dashboard</h3>
-							<img src="images/fulls/AccidentDashSC.png" alt="Road Collision Dashboard" width="750" height="345">
-							If you wish to take a closer look at the excel file and use the dashboard, you can download the .xlsx file <a href="https://github.com/johannaschmidle/PortfolioProjects/blob/main/BookSalesProject.xlsx"> here.</a> 
-							<br />
+					<h3>Summary of Findings</h3>
+					<h4>Accident Severity</h4>
+						<ul>
+							<li>The majority of accidents are <em>slight</em>, accounting for 85.3% of the total.</li>
+							<li>Fatal accidents constitute only 1.3% of the total.</li>
+							<li>Serious accidents make up 13.4% of the total.</li>
+						</ul>
 
+					<h4>Vehicle</h4>
+						<ul>
+							<li>Regular cars are most frequently involved in accidents, followed by motorcycles.</li>
+						</ul>
+
+					<h4>Accidents per Year</h4>
+						<ul>
+							<li>Accident rates are consistently high from May to July across all four years.</li>
+							<li>Most years see a peak in accidents in November.</li>
+							<li>February typically has the lowest number of accidents each year.</li>
+						</ul>
+
+					<h4>Road Type</h4>
+						<ul>
+							<li>Single-carriageway roads witness the highest number of collisions (492.1K).</li>
+							<li>The least amount of collisions occur on a slip road.</li>
+						</ul>
+
+					<h4>Light Condition</h4>
+						<ul>
+							<li>The majority of collisions occur during daytime (approximately 75%).</li>
+						</ul>
+
+					<h4>Road Condition</h4>
+						<ul>
+							<li>Most collisions occur on dry roads (447.8K).</li>
+							<li>Collisions on flooded roads are rare (1.0K), likely due to the infrequency of floods.</li>
+						</ul>
+
+						<h4>Location/Area</h4>
+						<ul>
+							<li>The majority of collisions occur in rural areas, likely due to the higher population density in these areas.</li>
+						</ul>
+					<h3>Recommended Next Steps</h3>
+						<ul>
+							<li>Collaborate with stakeholders (Department for Transport, Road Safety Corps, Traffic Management agencies, etc.)</li>
+							<li>Engage with local authorities, transport agencies, and road safety organizations to share insights and collaborate on safety initiatives.</li>
+							<li>Use the findings to support grant applications and funding requests for road safety projects.</li>
+						</ul>
 				</section>
+
 
                 <!-- Three -->
 					<section id="three">
 						<h2>Database Information</h2>
 						<p> <b>Database:</b><a href="https://www.kaggle.com/datasets/nezukokamaado/road-accident-casualties-dataset"> https://www.kaggle.com/datasets/nezukokamaado/road-accident-casualties-dataset</a> <br />
-                            Each row represents an instance of a car crash with the following information: TO DO FIX
+                            Each row represents an instance of a car crash with the following information:
                             <ul>
-								<li><b>Index:</b> The title of each book</li>   
-                                <li><b>Accident_Severity:</b> The title of each book</li>   
-                                <li><b>Accident Date:</b> The name of the author(s)</li>      
-                                <li><b>Latitude:</b> The code representing the language the book was written in</li>
-                                <li><b>Light_Conditions:</b> The rating assigned to the author (Excellent, Intermediate, Famous, Novice)</li>
-                                <li><b>District Area:</b> The average rating given to the book by readers</li>
-                                <li><b>Longitude:</b> The quanitity of ratings given to the book by readers</li>
-                                <li><b>Number_of_Casualties:</b> The genre or category of the book (children, fiction, nonfiction)</li>
-                                <li><b>Number_of_Vehicles:</b> The total sales revenue generated by each book</li>  
-								<li><b>Road_Surface_Conditions:</b> The revenue earned by publishers from selling each book</li>
-                                <li><b>Road_Type:</b> The price to purchase one copy of the book</li>                 
-								<li><b>Urban_or_Rural_Area:</b> A numeric value indicating a book's rank based on its sales performance in comparison to other books within its category (genre)</li>
-                                <li><b>Weather_Conditions:</b> Total number of copies sold</li>                    
-								<li><b>Vehicle_Type:</b> Total number of copies sold</li>                                                
+								<li><b>Index:</b> The refrence code (index) of the collision</li>   
+                                <li><b>Accident_Severity:</b> The severity of the collision (Fatal, Serious, Slight)</li>   
+                                <li><b>Accident Date:</b> The date of the collision</li>      
+                                <li><b>Latitude:</b> The latitude coordinate of the collision</li>
+                                <li><b>Light_Conditions:</b> The light conditions during the collion (ex. day, night, streetlamps on, streetlamps off)</li>
+                                <li><b>District Area:</b> The district where the collision took place</li>
+                                <li><b>Longitude:</b> The longitude coordinate of the collision</li>
+                                <li><b>Number_of_Casualties:</b> The number of casualties caused by the collision</li>
+                                <li><b>Number_of_Vehicles:</b> The number of vehicles involved in th ecollision</li>  
+								<li><b>Road_Surface_Conditions:</b> The road conditions (wet, frost, dry, etc.)</li>
+                                <li><b>Road_Type:</b> Type of road (ex. Single carriageway, Dual carriageway)</li>                 
+								<li><b>Urban_or_Rural_Area:</b> Area type </li>
+                                <li><b>Weather_Conditions:</b> Weather conditions during collision</li>                    
+								<li><b>Vehicle_Type:</b> Type of vehicle inolved in collision</li>                                                
                             </ul>
                         </p>
 					</section>
