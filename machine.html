@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>News Summarizer</title>
+		<title>RamsayGPT</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -18,7 +18,7 @@
 				<div class="inner">
 					<a class="image avatar"><img src="images/avatars/pic10.jpg" alt="avatar" /></a>
 					<h1><strong>Johanna Schmidle</strong> <br />
-					Likes to stay informed <br /> in the easiest ways possible
+					Fan of Gordon Ramsay <br /> And always happy to learn!
 					</h1>
 				</div>
 			</header>
@@ -29,26 +29,87 @@
 				<!-- One -->
 					<section id="one">
 						<header class="major">
-							<h2>Analyzing Road Collision Data (2019-2022)</h2>
-							<h3>Subtitle</h3>
+							<h2>Gordon Ramsay AI Tutor (RamsayGPT)</h2>
+							<h3>Have a world famous chef help you study!</h3>
+							<p> Link to project repository on <a href="https://github.com/johannaschmidle/Gordon-Ramsay-AI-Tutor">GitHub</a> 
 						</header>
-						<p>This project was inspired by a video from the channel <a href="https://www.youtube.com/@TinaHuang1">TinaHuang1</a> for the premise of this project. I only used her outline for the context prompt found <a href="https://forms.gle/KZ1S5Qq2vWzMbsf16">here</a> <br />
+						<p> 
 						</p>
 					</section>
 
                 <!-- Two -->
 				<section id="two">
-							<h3>How To Use</h3>
-							
-							<br />
+					<h3>How the Tutor Works</h3>
+					<p>
+						<b>Note:</b> you will need an API key to to able to run these files <br />
+						<br />
+						You will be asked about what topic you would like to learn. Once you have chosen a topic, Chef Ramsay can teach you about it in one of three ways:
+					</p>
+					<ol>
+						<li><strong>Variation of TOPIC</strong>, where RamsayGPT will give you different variations of the topic which will help you study the differences between them</li>
+						<li><strong>Game to learn TOPIC</strong>, where RamsayGPT will create a game to help you learn the topic</li>
+						<li><strong>Explain TOPIC</strong>, where RamsayGPT will give an explanation of the topic</li>
+					</ol>
+					<p>
+						Feel free to choose the option that best fits your personal learning style! But be careful, RamsayGPT gets impatient if you don't answer the prompts correctly :(
+					</p>
+					<h3>Versions</h3>
+					<p>
+						I have created three versions:
+					</p>
+					<ol>
+						<li><strong>Basic</strong>: This is just the plain code in a Python environment</li>
+						<li><strong>Medium</strong>: This is similar logic code to basic but I have used the python <em>panel</em> library to make an interactive chat window</li>
+						<li><strong>App</strong>: I used a streamlit template to create an app that is hosted online so you do not have to download and run the code yourself. You can just try the app version</li>
+					</ol>
 
 				</section>
 
                 <!-- Three -->
 					<section id="three">
-						<h2>Database Information</h2>
-						<img src="images/fulls/03.jpg" alt="Road Collision Dashboard" width="750" height="345"> 
+					
+						<h2>How to Run the Basic Version</h2>
+						<ul>
+							<li>Go to this <a href="https://github.com/johannaschmidle/Gordon-Ramsay-AI-Tutor">link</a> and download the repository</li>
+							<li>Add a file called "ApiKey.txt" that holds your own personal API key to the same file on your computer</li>
+							<li>When you want to use the AI tutor just run all the code blocks and respond to the prompts</li>
+							<li>When you wish to <strong>stop</strong>, just type quit into the text box and you will exit the chat</li>
+						</ul>
+						<p>
+							Here is a screenshot of what it will look like:
+						</p>
+						<img src="images/fulls/RamsayBasicSC.png" alt="Basic Version" width="750" height="345"> 
+						<br />
+						<br />
+						<h2>How to Run the Medium Version</h2>
+						<ul>
+							<li>Go to this <a href="https://github.com/johannaschmidle/Gordon-Ramsay-AI-Tutor">link</a> and download the repository</li>
+							<li>Add a file called "ApiKey.txt" that holds your own personal API key to the same file on your computer</li>
+							<li>When you want to use the AI tutor just run all the code blocks and the code will create a new window with the interactive chat display</li>
+							<li>When you wish to <strong>stop</strong>, just exit the window</li>
+						</ul>
+						<p>
+							Here is a screenshot of what it will look like:
+						</p>
+						<img src="images/fulls/RamsayMediumSC.png" alt="Basic Version" width="750" height="345"> 
+						<br />
+						<br />
+						<h2>App Version</h2>
+						<p><strong>Note</strong> that I used a template for this from Streamlit Share. This is not my code. I included this so that users could see how the AI Tutor behaves, even if they do not wish to download files and run it on their machine.</p>
+						<p>
+							<a href="https://chatbot-8eqzu4tw5mc.streamlit.app/">
+								<img src="https://static.streamlit.io/badges/streamlit_badge_black_white.svg" alt="Open in Streamlit">
+							</a>
+						</p>
 					</section>
+					
+				<!-- Four -->
+				<section id="four">
+					<h2>Acknowledgements</h2>
+					
+					The premise of this project was inspired by a video from the youtube channel <a href="https://www.youtube.com/@TinaHuang1">TinaHuang1</a>. I only used her outline for the context prompt found <a href="https://forms.gle/KZ1S5Qq2vWzMbsf16">here</a>, the rest of it I learned through google and the OpenAI website.
+				</section>
+								
 			</div>
 
 		<!-- Footer -->
