@@ -1,0 +1,215 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>House Price Predictor</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+		<header id="header">
+			<div class="inner">
+				<a class="image avatar"><img src="images/avatars/pic10.jpg" alt="avatar" /></a>
+				<h1><strong>Johanna Schmidle</strong><br />
+					Who's dreams of <br /> owning a house one day <br /> are slowly dying
+				</h1>
+			</div>
+		</header>
+
+		<!-- Main -->
+		<div id="main">
+
+			<!-- One -->
+			<section id="one">
+				<header class="major">
+					<h2>House Price Predictor</h2>
+					<h3>Predicting Home Sale Prices with Machine Learning</h3>
+					<p> Link to project repository on <a href="https://github.com/johannaschmidle/House-Price-Predictor/tree/main">GitHub</a> </p>
+				</header>
+				<p><strong>Goal:</strong> build a machine learning model to predict the sales price for each house. For each Id in the test set, I must predict the value of the <strong>SalePrice</strong> variable.</p>
+				<p>Submissions are evaluated on <strong>Root-Mean-Squared-Error</strong> (RMSE) between the logarithm of the predicted value and the logarithm of the observed sales price. (Taking logs means that errors in predicting expensive houses and cheap houses will affect the result equally.)</p>
+			</section>
+
+			<!-- Two -->
+			<section id="two">
+				<h2>Steps</h2>
+				<ol>
+				<li><strong>Select Features</strong>
+					<ul>
+					<li>There are a lot of features to choose from (80). I am going to focus on the ones that I think will have the most significant impact on housing price. I focused on features related to:
+						<ul>
+						<li>Quality and Condition</li>
+						<li>Size and Space</li>
+						<li>Year Built and Remodel Date</li>
+						<li>Location</li>
+						<li>Amenities</li>
+						</ul>
+					</li>
+					</ul>
+				</li>
+				<li><strong>Visualize and Understand Data</strong>
+					<ul>
+					<li>Histograms</li>
+					<li>Correlation Heatmap</li>
+					</ul>
+				</li>
+				<li><strong>Preprocessing</strong>
+					<ul>
+					<li>Dealing with skewed data</li>
+					<li>Null Values</li>
+					<li>Split the Data (Into train_X, val_X, train_y, val_y,)</li>
+					<li>Dealing with Categorical Features
+						<ul>
+						<li>Ordinal Encoding</li>
+						<li>OneHot Encoding</li>
+						<li>Target Encoding</li>
+						<li>Deciding if a feature was worth keeping. This included:
+							<ul>
+							<li>ANOVA (Analysis of Variance) Testing</li>
+							<li>Boxplot</li>
+							<li>Bar chart</li>
+							</ul>
+						</li>
+						</ul>
+					</li>
+					</ul>
+				</li>
+				<li><strong>Define Model</strong>
+					<ul>
+					<li>I create 3 models total
+						<ul>
+						<li>Model 1: Random Forest Regressor</li>
+						<li>Model 2: Random Forest Regressor + parameters from Cross-Validation</li>
+						<li>Model 3: XGBoost + parameters from Cross-Validation</li>
+						</ul>
+					</li>
+					I create model 2 and 3 in steps 6 and 7 (respectively). In this step I only create model 1.
+					</ul>
+				</li>
+				<li><strong>Evaluate Model</strong>
+					<ul>
+					<li>Mean Absolute Error (MAE)</li>
+					<li>Mean Squared Error (MSE)</li>
+					<li>Root Mean Squared Error (RMSE)</li>
+					<li>R² Score (R-Squared) (coefficient of determination)</li>
+					<li>Created a visualization to see model (at top of ReadMe)</li>
+					</ul>
+				</li>
+				<li><strong>Cross-Validation</strong>
+					<ul>
+					<li>Performed grid search for hyperparameter tuning</li>
+					<li>Evaluated the best parameters and model performance using the same metrics as step 5</li>
+					<li>Created a visualization to see model (at top of ReadMe)</li>
+					</ul>
+				</li>
+				<li><strong>XGBoost</strong> (with Cross-Validation)
+					<ul>
+					<li>Performed grid search for hyperparameter tuning</li>
+					<li>Evaluated the best parameters and model performance using the same metrics as step 5</li>
+					<li>Created a visualization to see model (at top of ReadMe)</li>
+					</ul>
+				</li>
+				</ol>
+			</section>
+
+			<!-- Three -->
+			<section id="three">
+				<h2>Result of Model Evaluations</h2>
+				<p>The range in SalePrice is between $34,900 and $755,000</p>
+				<h3>Model 1: Random Forest Regressor</h3>
+				<ul>
+					<li>Mean Absolute Error (MAE): On average, the model’s predictions are off by <strong>$15,166</strong> from the actual values</li>
+					<li>Mean Squared Error (MSE): 505,306,699.1469689</li>
+					<li>Root Mean Squared Error (RMSE): On average, the model’s predictions are off by approximately <strong>$22,479.03</strong></li>
+					<li>R² Score (R-Squared): Approximately <strong>92.9%</strong> of the variance in the target variable can be explained by the model</li>
+					<img src="images/fulls/Model1.png" alt="Visualization of Model 1" width="400"> <br />
+				</ul>
+				<h3>Model 2: Random Forest Regressor + Cross-Validation</h3>
+				<ul>
+					<li>Mean Absolute Error (MAE): On average, the model’s predictions are off by <strong>$15,376</strong> from the actual values</li>
+					<li>Mean Squared Error (MSE): 527,937,019.0061122</li>
+					<li>Root Mean Squared Error (RMSE): On average, the model’s predictions are off by approximately <strong>$22,976.88</strong></li>
+					<li>R² Score (R-Squared): Approximately <strong>92.6%</strong> of the variance in the target variable can be explained by the model.</li>
+					<img src="images/fulls/Model2.png" alt="Visualization of Model 1" width="400"> <br />
+				</ul>
+				<h3>Model 3: XGBoost + Cross-Validation</h3>
+				<ul>
+					<li>Mean Absolute Error (MAE): On average, the model’s predictions are off by <strong>$14,872</strong> from the actual values</li>
+					<li>Mean Squared Error (MSE): 527,363,271.027355</li>
+					<li>Root Mean Squared Error (RMSE): On average, the model’s predictions are off by approximately <strong>$22,964.39</strong></li>
+					<li>R² Score (R-Squared): Approximately <strong>92.6%</strong> of the variance in the target variable can be explained by the model.</li>
+					<img src="images/fulls/Model3.png" alt="Visualization of Model 1" width="400"> <br />
+				</ul>
+			</section>
+			
+			<!-- Four -->
+			<section id="four">
+				<h2>Data</h2>
+				<b>Database:</b><a href="https://www.kaggle.com/competitions/home-data-for-ml-course" target="_blank"> https://www.kaggle.com/competitions/home-data-for-ml-course</a> <br />
+				There are 80 columns in this database, but I only used 25. Here are the ones I used: <br />
+				<br />
+				<ul>
+					<li><strong>OverallQual:</strong> Overall material and finish quality.</li>
+					<li><strong>OverallCond:</strong> Overall condition rating.</li>
+					<li><strong>YearBuilt:</strong> Original construction year.</li>
+					<li><strong>YearRemodAdd:</strong> Remodel year.</li>
+					<li><strong>GrLivArea:</strong> Above grade (ground) living area square feet.</li>
+					<li><strong>TotalBsmtSF:</strong> Total square feet of basement area.</li>
+					<li><strong>1stFlrSF:</strong> First-floor square feet.</li>
+					<li><strong>2ndFlrSF:</strong> Second-floor square feet.</li>
+					<li><strong>GarageCars:</strong> Size of garage in car capacity.</li>
+					<li><strong>GarageArea:</strong> Size of garage in square feet.</li>
+					<li><strong>FullBath:</strong> Full bathrooms above grade.</li>
+					<li><strong>HalfBath:</strong> Half bathrooms above grade.</li>
+					<li><strong>KitchenQual:</strong> Kitchen quality.</li>
+					<li><strong>TotRmsAbvGrd:</strong> Total rooms above grade (does not include bathrooms).</li>
+					<li><strong>Fireplaces:</strong> Number of fireplaces.</li>
+					<li><strong>FireplaceQu:</strong> Fireplace quality.</li>
+					<li><strong>GarageYrBlt:</strong> Year garage was built.</li>
+					<li><strong>LotArea:</strong> Lot size in square feet.</li>
+					<li><strong>Neighborhood:</strong> Physical locations within Ames city limits.</li>
+					<li><strong>BsmtFinSF1:</strong> Type 1 finished square feet in the basement.</li>
+					<li><strong>BsmtFinSF2:</strong> Type 2 finished square feet in the basement.</li>
+					<li><strong>BsmtUnfSF:</strong> Unfinished square feet in the basement.</li>
+					<li><strong>HeatingQC:</strong> Heating quality and condition.</li>
+					<li><strong>CentralAir:</strong> Central air conditioning (Y=Yes, N=No).</li>
+					<li><strong>BedroomAbvGr:</strong> Number of bedrooms above grade.</li>
+				</ul>
+			</p>
+			</section>
+
+			<!-- Seven -->
+			<section id="seven">
+				<h3>View My Submission on Kaggle</h3>
+				<p>The link to my submission is <a href="https://www.kaggle.com/code/johannaschmidle7/house-price-predictor" target="_blank">here</a></p>
+			</section>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<a href="index.html">Back to Main Page</a>
+					<ul class="icons">
+						<li><a href="https://www.kaggle.com/johannaschmidle7" class="icon brands fa-kaggle" target="_blank"><span class="label">Kaggle</span></a></li>
+						<li><a href="https://github.com/johannaschmidle" class="icon brands fa-github" target="_blank"><span class="label">Github</span></a></li>
+						<li><a href="https://ca.linkedin.com/in/johannaschmidle" class="icon brands fa-linkedin" target="_blank"><span class="label">LinkedIn</span></a></li>
+						<li><a href="mailto:johannaschmidle7@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; Untitled</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
