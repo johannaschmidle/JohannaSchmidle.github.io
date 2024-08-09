@@ -1,0 +1,175 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Titanic Survival Predictor</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<div class="inner">
+					<a class="image avatar"><img src="images/avatars/pic10.jpg" alt="avatar" /></a>
+					<h1><strong>Johanna Schmidle</strong> <br />
+					Has actually never seen <br /> the movie Titanic 
+					</h1>
+				</div>
+			</header>
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- One -->
+				<section id="one">
+					<header class="major">
+						<h2>Titanic Prediction Model</h2>
+						<h3>Sailing through Data: Who Survives the Titanic?</h3>
+						<p> Link to project repository on <a href="https://github.com/johannaschmidle/TitanicSurvival">GitHub</a> </p>
+					</header>
+                    <p><strong>Goal:</strong> build a machine learning model to predict if a passenger survived the sinking of the Titanic or not.<br>
+                        For each in the test set, you must predict a 0 or 1 value for the variable (Classifier).
+                    </p>
+                    <p>Submissions are evaluated on <strong>accuracy</strong>. The score is the percentage of passengers you correctly predict (this is known as accuracy).</p>
+				</section>
+
+                <!-- Two -->
+				<section id="two">
+
+
+                    <h2>Steps</h2>
+                    <ol>
+                        <li><strong>EDA</strong></li>
+                        <li><strong>Feature Engineering</strong>
+                            <ul>
+                                <li>Family Size: Larger families might have different survival rates compared to solo travelers.</li>
+                                <li>Person's Title: (e.g., Ms, Mr) Titles can provide insight into age, gender, and social status, which might affect survival chances.</li>
+                                <li>Cabin Deck: The deck could correlate with proximity to lifeboats and thus survival rates.</li>
+                                <li>Cabin Assigned: Passengers who have not been assigned a cabin might have different survival probabilities compared to those with recorded cabin details.</li>
+                                <li>Age Group: Different age groups might have had different survival probabilities.</li>
+                                <li>Fare Price Groups: I will create different groups of fare price, which can capture non-linear relationships between fare and survival.</li>
+                                <li>Name Length: Especially in the early 1900s, a person with a longer name could indicate importance, which can impact survival rate.</li>
+                            </ul>
+                            </li>
+                            <li><strong>Preprocessing</strong>
+                                <ul>
+                                    <li>Dealing With Nulls</li>
+                                    <li>Split the Data</li>
+                                    <li>Create Pipelines + Transform Columns</li>
+                                </ul>
+                            </li>
+                            <li><strong>Visualize and Understand Data</strong>
+                                <ul>
+                                    <li>Histogram</li>
+                                    <li>KDE</li>
+                                    <li>Pie Chart</li>
+                                    <li>Heatmap</li>
+                                </ul>
+                            </li>
+                            <li><strong>Define Models</strong> <br />
+                                I created 5 models:
+                                <ul>
+                                    <li>Model 1: Random Forest Classifier</li>
+                                    <li>Model 2: Logistic Regression</li>
+                                    <li>Model 3: K-Nearest Neighbours</li>
+                                    <li>Model 4: XGBoost</li>
+                                    <li>Model 5: Adaptive Boost</li>
+                                </ul>
+                            </li>
+                            <li><strong>Create Competition Submission</strong></li>
+                            </ol>
+				</section>
+
+                <!-- Three -->
+				<section id="three">
+                    <h2>Result of Model Evaluations</h2>
+                <h3>Model 1: Random Forest Regressor</h3>
+                <ul>
+                    <li>Best Score: 0.834</li>
+                    <li>Correct: 138</li>
+                    <li>Incorrect: 41</li>
+                </ul>
+
+                <h3>Model 2: Logistic Regression</h3>
+                <ul>
+                    <li>Best Score: 0.795</li>
+                    <li>Correct: 141</li>
+                    <li>Incorrect: 38</li>
+                </ul>
+
+                <h3>Model 3: K-Nearest Neighbours</h3>
+                <ul>
+                    <li>Best Score: 0.829</li>
+                    <li>Correct: 136</li>
+                    <li>Incorrect: 43</li>
+                </ul>
+
+                <h3>Model 4: XGBoost</h3>
+                <ul>
+                    <li>Best Score: 0.803</li>
+                    <li>Correct: 137</li>
+                    <li>Incorrect: 42</li>
+                </ul>
+
+                <h3>Model 5: Adaptive Boost</h3>
+                <ul>
+                    <li>Best Score: 0.819</li>
+                    <li>Correct: 137</li>
+                    <li>Incorrect: 42</li>
+                </ul>
+
+                <h2>Competition Scores (Best to Worst)</h2>
+                <ul>
+                    <li>Model 4: XGBoost - <strong>0.76555</strong></li>
+                    <li>Model 2: Logistic Regression - <strong>0.76794</strong></li>
+                    <li>Model 5: Adaptive Boost - <strong>0.77751</strong></li>
+                    <li>Model 3: K-Nearest Neighbours - <strong>0.77990</strong></li>
+                    <li>Model 1: Random Forest Regressor - <strong>0.78229</strong></li>
+                </ul>
+
+				</section>
+					
+				<!-- Four -->
+				<section id="four">
+                    <h2>Data</h2>
+                    <p>The dataset used in this project is available publicly on Kaggle: <a href="https://www.kaggle.com/competitions/titanic/data" target="_blank">https://www.kaggle.com/competitions/titanic/data</a></p>
+    
+                    <h2>Technologies</h2>
+                    <p><strong>Python</strong></p>
+                    <ul>
+                        <li>pandas, numpy, matplotlib, seaborn</li>
+                        <li>sklearn (OrdinalEncoder, OneHotEncoder, SimpleImputer, make_column_transformer, ColumnTransformer, Pipeline, LogisticRegression, DecisionTreeClassifier, KNeighborsClassifier, RandomForestClassifier, AdaBoostClassifier, cross_val_score, GridSearchCV, ConfusionMatrixDisplay)</li>
+                        <li>xgboost</li>
+                    </ul>
+				</section>
+								
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<a href="index.html">Back to Main Page</a>
+					<ul class="icons">
+						<li><a href="https://www.kaggle.com/johannaschmidle7" class="icon brands fa-kaggle" target="_blank"><span class="label">Kaggle</span></a></li>
+						<li><a href="https://github.com/johannaschmidle" class="icon brands fa-github" target="_blank"><span class="label">Github</span></a></li>
+						<li><a href="https://ca.linkedin.com/in/johannaschmidle" class="icon brands fa-linkedin" target="_blank"><span class="label">LinkedIn</span></a></li>
+						<li><a href="mailto:johannaschmidle7@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; Untitled</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
