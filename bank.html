@@ -1,0 +1,147 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Bank Customer Churn</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<div class="inner">
+					<a class="image avatar"><img src="images/avatars/pic10.jpg" alt="avatar" /></a>
+					<h1><strong>Johanna Schmidle</strong> <br />
+					Has to go to the bank <br /> a couple of times a year
+					</h1>
+				</div>
+			</header>
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- One -->
+				<section id="one">
+					<header class="major">
+						<h2>Bank Customer Churn Prediction Model</h2>
+						<h3>Predict, Prevent, and Prosper - Predicting Churn with Machine Learning</h3>
+						<p> Link to project repository on <a href="https://github.com/johannaschmidle/ChurnPredictionModel">GitHub</a> </p>
+					</header>
+                    <p><strong>Goal:</strong> build a machine learning model to predict if a bank's customer will churn (leave the bank) or not. <br />For each instance in the test set, you must predict a 0 or 1 value for the target variable (Classifier).</p>
+				</section>
+
+                <!-- Two -->
+				<section id="two">
+                    <h2>Steps</h2>
+                    <ol>
+                        <li><strong>EDA</strong>
+                            <ul>
+                                <li>data.describe()</li>
+                                <li>Pie chart</li>
+                                <li>Correlation heatmap</li>
+                                <li>Histograms</li>
+                                <li>KDE plots</li>
+                                <li>Univariate Exploration</li>
+                            </ul>
+                        </li>
+                        <li><strong>Feature Engineering</strong> (note I will train models on original features and engineered features separately)
+                            <ul>
+                                <li><strong>Age Group:</strong> grouping customers into age categories to capture non-linear relationships and improve the model’s ability to identify patterns.</li>
+                                <li><strong>Balance to Estimated Salary Ratio:</strong> provides insight into a customer's financial stability. A higher ratio may indicate financial strain, which could increase the likelihood of the customer leaving the bank.</li>
+                                <li><strong>Tenure Group:</strong> grouping tenure into categories to capture non-linear effects and reduce noise.</li>
+                                <li><strong>Loyalty Index:</strong> a composite feature reflecting customer loyalty, combining tenure, the number of products held, and whether they are an active member.</li>
+                                <li><strong>Balance Above 0:</strong> a binary feature indicating whether the customer's account balance is at or above zero.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Preprocessing</strong>
+                            <ul>
+                                <li>Split data</li>
+                                <li>Create pipeline
+                                    <ul>
+                                        <li>OneHot encoding</li>
+                                        <li>StandardScaler</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><strong>Create Models</strong>
+                            <ul>
+                                <li><strong>Model 1:</strong> Random Forest Classifier</li>
+                                <li><strong>Model 2:</strong> Logistic Regression</li>
+                                <li><strong>Model 3:</strong> Support Vector Machine</li>
+                                <li><strong>Model 4:</strong> K-Nearest Neighbours</li>
+                                <li><strong>Model 5:</strong> XGBoost</li>
+                                <li>Visualize models:
+                                    <ul>
+                                        <li>Confusion matrix</li>
+                                        <li>Display feature importance (when applicable)</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><strong>Create Models with Engineered Features</strong>
+                            <ul>
+                                <li>Repeat above (10 models total)</li>
+                            </ul>
+                        </li>
+                    </ol>
+
+				</section>
+
+                <!-- Three -->
+				<section id="three">
+                    <h2>Result of Model Evaluations</h2>
+                    <img src="images/fulls/ModelResults.jpg" alt="Model Results" width="700">
+                    <ul>
+                        <li><strong>Best Performing Model:</strong> Random Forest Classifier</li>
+                        <li><strong>Worst Performing Model:</strong> SVC Model (Features)</li>
+                        <li>Interestingly, models trained on the original features outperformed those utilizing feature-engineered data. Investigating the reasons behind this unexpected result could provide valuable insights into the feature engineering process and its impact on model performance.</li>
+                        <li>Age appears to be a significant predictor of customer churn. This finding suggests that the bank should explore the underlying reasons for why age is such a strong indicator. Implementing targeted promotions or incentives for customers in high-risk age groups could effectively reduce churn and retain these valuable customers.</li>
+                    </ul>
+				</section>
+					
+				<!-- Four -->
+				<section id="four">
+					<h2>Data</h2>
+                    <p>The dataset used in this project is available publicly on Kaggle: <a href="https://www.kaggle.com/datasets/shrutimechlearn/churn-modelling">https://www.kaggle.com/datasets/shrutimechlearn/churn-modelling</a></p>
+
+                    <h2>Technologies</h2>
+                    <strong>Python</strong>
+                        <ul>
+                            <li>pandas, numpy, matplotlib, seaborn</li>
+                            <li>sklearn (OneHotEncoder, StandardScaler, make_column_transformer, ColumnTransformer, Pipeline, RandomForestClassifier, LogisticRegression, SVC, KNeighborsClassifier, XGBClassifier, cross_val_score, GridSearchCV, ConfusionMatrixDisplay)</li>
+                            <li>XGBoost</li>
+                        </ul>
+                    
+				</section>
+								
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<a href="index.html">Back to Main Page</a>
+					<ul class="icons">
+						<li><a href="https://www.kaggle.com/johannaschmidle7" class="icon brands fa-kaggle" target="_blank"><span class="label">Kaggle</span></a></li>
+						<li><a href="https://github.com/johannaschmidle" class="icon brands fa-github" target="_blank"><span class="label">Github</span></a></li>
+						<li><a href="https://ca.linkedin.com/in/johannaschmidle" class="icon brands fa-linkedin" target="_blank"><span class="label">LinkedIn</span></a></li>
+						<li><a href="mailto:johannaschmidle7@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; Untitled</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
