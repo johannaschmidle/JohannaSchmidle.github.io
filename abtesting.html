@@ -29,43 +29,78 @@
 						<h3>Gems of Insight: Optimizing Ads for ChicBeads</h3>
 						<p>Link to project repository on <a href="https://github.com/johannaschmidle/ABTesting-FashionCampaign/tree/main">GitHub</a> </p>
 					</header>
-                    To practice skills in A/B testing, I utilized a dataset designed for this purpose and created a fictional backstory for the company I will analyze.
+
+                    <h2>Project Background</h2>
+                    ChicBeads, the sisterstore to a popular clothing store, is a company in the E-commerce fashion industry that sells beaded bracelets for $5.00 (USD) via an online platform. <br />
                     <br />
-                    <br />
-                    <h3>ChicBeads</h3>
-                    ChicBeads, a sister store to a popular online fashion retailer known for its trendy and affordable clothing, specializes in creating colorful beaded jewelry that complements many of the outfits sold at its sister store. Each accessory is sold for $5.00 (USD). The company has been performing well but decided to optimize its advertising strategies to boost online sales. To achieve this, they launched an A/B testing campaign to identify the most effective ways to reach and convert their target audience. <br />
-                    <b>Campaign Details:</b>
+                    This project analyzes and sythesizes data to uncover insights into the effectiveness of the companys new marketing campaign compared to its traditional one. <br />
                     <ul>
                         <li><strong>Control Campaign:</strong> The control campaign focused on traditional display ads featuring static images of their latest clothing collection.</li>
                         <li><strong>Test Campaign:</strong> The test campaign experimented with video ads showcasing short fashion shows and styling tips from influencers.</li>
                     </ul>
+                    Insights and recommendations are provided in the following key areas:
+                    <ul>
+                        <li><b>No. of Purchases:</b> determine if there is a significant difference in the number of purchases between different campaigns.</li>
+                        <li><b>Engagement & Conversion:</b> analyze Website Clicks and Add to Cart actions to determine which campaign better engages and converts users.</li>
+                        <li><b>Cost Efficiency:</b> compare ROI and Conversion Rates to see which strategy provides greater value for investment.</li>
+                        <li><b>Audience Reach:</b> evaluate the effectiveness of each campaign in reaching and engaging the target audience.
+                        </li>
+                    </ul>
+                    
+                        An interactive Tableau dashboard can be found <a href="https://public.tableau.com/app/profile/johanna.schmidle/viz/ChicBeadsAB-TestingDashboard/Dashboard2" target="_blank"> here</a>
+                        <br />
+                        The Python code used to clean, organize and prepare data can be found at the top of this <a href="https://github.com/johannaschmidle/ABTesting-FashionCampaign/blob/main/ab-testing-project.ipynb" target="_blank"> Python notebook</a> 
+                        <br />
+                        The Python code used to visualize and explore the data can be found in the same <a href="https://github.com/johannaschmidle/ABTesting-FashionCampaign/blob/main/ab-testing-project.ipynb" target="_blank"> Python notebook</a> 
+                        <br />
+                        The Python code used to perform statistical tests can be found in the same <a href="https://github.com/johannaschmidle/ABTesting-FashionCampaign/blob/main/ab-testing-project.ipynb" target="_blank"> Python notebook</a> 
+                    </section>
 
-                    <strong>Hypothesis:</strong> The Test Campaign will lead to a higher number of purchases compared to the Control Campaign due to different marketing strategies. <br />
-                    <strong>Goal:</strong> Increase the number of purchases through the Test Campaign compared to the Control Campaign.<br />
-                    <strong>Primary Objective:</strong> Determine if there is a significant difference in the number of purchases between different campaigns.<br />
-                    <strong>Secondary Objectives:</strong> Assess the impact of the campaigns on other metrics such as Website Clicks, Reach, and Add to Cart.
+                <!-- five -->
+				<section id="five">
+                    <h2>Data Structure</h2>
+                    The main database for the analysis consists two tables: TestCampaign and ControlCampaign. They hold the same sales information for each respective campaign. <br />
                     <br />
+                    <img src="images/fulls/ERDChicBeads.png" alt="Chic Beads ERD" width="700"> <br />
                     <br />
-                    <b>This project has two parts:</b>
-							<ul>
-								<li>
-									Part 1:<a href="https://github.com/johannaschmidle/ABTesting-FashionCampaign/blob/main/ab-testing-project.ipynb" target="_blank"> Python Notebook</a> 
-                                    <ol>
-                                            <li>Clean Data</li>
-                                            <li>Visualize Data</li> 
-                                            <li>Statistical Tests + Hypothesis Testing (Mann-Whitney U Test/ Two-Sample T-Test, Pairwise Tests)</li> 
-                                    </ol>
-								</li>
-								<li>
-									Part 2:<a href="https://public.tableau.com/app/profile/johanna.schmidle/viz/ChicBeadsAB-TestingDashboard/Dashboard2" target="_blank"> Interactive Dashboard</a>
-									<img src="images/fulls/ABTestingDash.png" alt="Chic Beads Dashboard" width="700"> <br />
-								</li>
-							</ul>
-                </section>
+                    The database can be accessed here:<a href="https://www.kaggle.com/datasets/amirmotefaker/ab-testing-dataset" target="_blank"> https://www.kaggle.com/datasets/amirmotefaker/ab-testing-dataset</a> <br />
+                    
+				</section>
+
 
                 <!-- Two -->
 				<section id="two">
-                    <h2>Summary of Findings</h2>
+                    <h2>Executive Summary</h2>
+                    Below is the overview section of the interactive dashboard and there are more examples from this and the Python notebook throughout the report. The Tableau dashboaard can be found <a href="https://public.tableau.com/app/profile/johanna.schmidle/viz/ChicBeadsAB-TestingDashboard/Dashboard2" target="_blank"> here</a> and the Python notebook can be found <a href="https://github.com/johannaschmidle/ABTesting-FashionCampaign/blob/main/ab-testing-project.ipynb" target="_blank"> here</a>. <br/>
+                    <br/>
+                    <img src="images/fulls/ChicOverview.png" alt="Chic Beads" width="700"> 
+                    <br/>
+                    <br />
+                    <b>Number of Purchases</b>
+                    <ul>
+                        <li>
+                            There is no statistically significant difference in the number of purchases between the Control and Test Campaigns. Despite the Test Campaign’s engaging format, it did not lead to higher purchase rates compared to the static ads in the Control Campaign.
+                        </li>
+                        <br />
+                        <img src="images/fulls/ChicPurchases.png" alt="Chic Beads" width="500"> 
+                    </ul>
+                    <b>Engagement & Conversion:</b>
+                    <ul>
+                        <li>The Test Campaign had a significantly higher Click-Through Rate (CTR) and more Add to Cart actions, indicating better engagement and a stronger conversion funnel. However, it did not lead to a statistically significant increase in purchase rates.</li>
+                    </ul>
+                    <b>Cost Efficiency</b>
+                    <ul>
+                        <li>Despite fewer purchases, the Control Campaign proved more cost-effective, achieving a higher Return on Investment (ROI) compared to the Test Campaign.</li>
+                        <img src="images/fulls/ChicBeadsCost.png" alt="Cost" width="400"> <br />
+                        <li><b>Test Campaign:</b> Notice that it looks like the more money that is spent on the Test Campaign typically resulted in more purchases for the same cost as the Control Campaign. Also, this campaign has the max purchases out of the two, but it also has the min.</li>
+                        <li><b>Control Campaign:</b> Notice that it looks like the less money that is spent on the Control Campaign typically resulted in more purchases for the same cost as the test group.</li>
+                    </ul>
+                    <b>Audience Reach:</b>
+                    <ul>
+                        <li>The Control Campaign reached a broader audience, but this did not translate into higher conversions. The Test Campaign demonstrated a more focused impact, significantly increasing engagement metrics. </li>
+                    </ul>
+
+                    <h2>Detailed Summary of Findings</h2>
 
                     <h4>From Visualizations</h4>
                     <ul>
@@ -103,7 +138,11 @@
                         <li>There is a statistically significant difference in CTR rates between the Test and Control campaigns.</li>
                     </ul>
 
-                    <h4>Overall</h4>
+				</section>
+
+                <!-- Four -->
+				<section id="four">
+                    <h2>Overall</h2>
                     <ul>
                         <li><strong>Control Campaign:</strong> Although the Control Campaign effectively reaches a broader audience, this does not result in higher Add to Cart or Purchase rates. The campaign is more cost-effective, indicated by a higher ROI and Conversion Rate.</li>
                         <li><strong>Test Campaign:</strong> The Test Campaign is more effective in converting viewers to customers, as seen in the strong correlation between Add to Cart and Purchase rates. The Test Campaign also has a higher CTR, indicating more engaged viewers.</li>
@@ -112,12 +151,14 @@
                         <li>The return on the advertisement spend is higher in the Control Campaign than the Test campaign.</li>
                     </ul>
 
-                    <h3>Recommendations For Company</h3>
+                    <h2>Recommendations For Company</h2>
                     <ul>
-                        <li>Continue with the original advertising strategy. Continuously experiment and perform A/B testing to refine and identify the most effective strategies.</li>
-                        <li>Focus on more targeted advertising strategies, similar to those used in the Test Campaign, to improve conversion rates.</li>
-                        <li>Ensure that advertisements align well with what customers are searching for, as evidenced by the strong correlation between Searches and View Content.</li>
-                    </ul>
+                        <li><b>Allocate Budget:</b> Increase the advertising spend on the Test Campaign to capitalize on its higher engagement potential, while monitoring ROI.</li>
+                        <li><b>Refine Content Strategy:</b> Continue using video ads and explore additional influencer-driven content to boost conversion rates.</li>
+                        <li><b>Continuous Experimentation:</b> Maintain the current strategy but regularly run A/B tests to refine and optimize advertising effectiveness.</li>
+                        <li><b>Targeted Advertising:</b> Focus on more targeted approaches, like those used in the Test Campaign, to improve conversion rates.</li>
+                        <li><b>Ad Relevance:</b> Align ads with customer search behavior, leveraging the strong correlation between Searches and View Content.</li>
+                      </ul>
 
                     <h2>Recommended Next Analysis Steps</h2>
                     <ul>
@@ -125,25 +166,28 @@
                         <li><strong>Trend Analysis:</strong> Conduct a time series analysis to understand how campaign performance changes over time and identify any seasonal trends.</li>
                         <li><strong>Segmentation Analysis:</strong> Break down the results by demographic segments (e.g., age, gender, location) to understand which segments respond better to each campaign.</li>
                     </ul>
+
+                    <b>Conclusion:</b> The Test Campaign shows promise for driving higher engagement, but ongoing testing and optimization are essential to balance cost efficiency and conversion outcomes.
 				</section>
 
                 <!-- Three -->
 				<section id="three">
-                    <h2>Database Information</h2>
-                    <p> <b>Database:</b><a href="https://www.kaggle.com/datasets/amirmotefaker/ab-testing-dataset" target="_blank"> https://www.kaggle.com/datasets/amirmotefaker/ab-testing-dataset</a> <br />
-                        <ul>
-                            <li><strong>Campaign Name:</strong> The name of the campaign</li>
-                            <li><strong>Date:</strong> Date of the record</li>
-                            <li><strong>Spend:</strong> Amount spent on the campaign in dollars</li>
-                            <li><strong>Number of Impressions:</strong> Number of impressions the ad crossed through the campaign</li>
-                            <li><strong>Reach:</strong> The number of unique impressions received in the ad</li>
-                            <li><strong>Number of Website Clicks:</strong> Number of website clicks received through the ads</li>
-                            <li><strong>Number of Searches:</strong> Number of users who performed searches on the website</li>
-                            <li><strong>Number of View Content:</strong> Number of users who viewed content and products on the website</li>
-                            <li><strong>Number of Add to Cart:</strong> Number of users who added products to the cart</li>
-                            <li><strong>Number of Purchase:</strong> Number of purchases</li>
-                        </ul>
-                    </p>
+                    <h2>Project Structure</h2>
+                    <b>This project has two parts:</b>
+							<ul>
+								<li>
+									Part 1:<a href="https://github.com/johannaschmidle/ABTesting-FashionCampaign/blob/main/ab-testing-project.ipynb" target="_blank"> Python Notebook</a> 
+                                    <ol>
+                                            <li>Clean Data</li>
+                                            <li>Visualize Data</li> 
+                                            <li>Statistical Tests + Hypothesis Testing (Mann-Whitney U Test/ Two-Sample T-Test, Pairwise Tests)</li> 
+                                    </ol>
+								</li>
+								<li>
+									Part 2:<a href="https://public.tableau.com/app/profile/johanna.schmidle/viz/ChicBeadsAB-TestingDashboard/Dashboard2" target="_blank"> Interactive Dashboard</a>
+									<img src="images/fulls/ABTestingDash.png" alt="Chic Beads Dashboard" width="700"> <br />
+								</li>
+							</ul>
 				</section>
 								
 			</div>
