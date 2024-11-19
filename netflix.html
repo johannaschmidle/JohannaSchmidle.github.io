@@ -34,74 +34,75 @@
 							<p> Link to project repository on <a href="https://github.com/johannaschmidle/Netflix-Subscription-Analysis?tab=readme-ov-file">GitHub</a> </p>
 						</header>
 						<p> 
-							<b>Goal:</b> Market Analysis. Understanding Netflix subscription trends provides valuable insights into market behavior, helping to predict future industry patterns and consumer preferences. <br />
+							<h2>Project Background</h2>
+							Netflix, founded in 1997, is a global streaming platform offering a wide range of TV shows, movies, and original productions to audiences worldwide. <br />
+							<br />
+							The company has extensive data on user preferences, viewing habits, and subscription trends that has yet to be fully leveraged. This project analyzes Netflix subscription trends to provide valuable insights into market behavior, helping to predict future industry patterns and consumer preferences. <br />
+							<br />
 							
-							<h4>Metrics and Dimensions</h4>
+							Insights and recommendations are provided in the following key areas:
 							<ul>
 								<li><strong>Total Subscriptions:</strong> total subscription sales from all plan types</li>
 								<li><strong>Plan Type:</strong> Basic, Premium, and Standard</li>
 								<li><strong>Country:</strong> Australia, Brazil, Canada, France, Germany, Italy, Mexico, Spain, UK, and US</li>
 								<li><strong>Plan Device:</strong> Device on which the subscription will be used. Laptop, Smart TV, Smartphone, and Tablet</li>
 							</ul>
-							<b>This project has two parts:</b>
-							<ul>
-								<li>
-									Part 1:<a href="https://github.com/johannaschmidle/Netflix-Subscription-Analysis/blob/main/NetflixSubsCleaning.sql" target="_blank"> General Data Cleaning in SQL</a> 
-								</li>
-								<li>
-									Part 2:<a href="https://public.tableau.com/app/profile/johanna.schmidle/viz/NetflixSubscriptionsDash/Dashboard1?publish=yes" target="_blank"> Interactive Dashboard</a>
-									<img src="images/fulls/NetflixSubscriptions.png" alt="netflix Subscriptions Dashboard" width="700"> <br />
-								</li>
-							</ul>
+
+							An interactive Tableau dashboard can be found <a href="https://public.tableau.com/app/profile/johanna.schmidle/viz/NetflixSubscriptionsDash/Dashboard1?publish=yes" target="_blank"> here</a>
+                        <br />
+                        	The SQL queries used to clean, organize, and prepare data for analysis can be found <a href="https://github.com/johannaschmidle/Netflix-Subscription-Analysis/blob/main/NetflixSubsCleaning.sql" target="_blank"> here</a>  
+
 						</p>
 					</section>
 
+					<!-- five -->
+				<section id="five">
+                    <h2>Data Structure</h2>
+                    The dataset provides a snapshot of a sample Netflix userbase, showcasing various aspects of user subscriptions, revenue, account details, and activity. <br />
+                    <br />
+                    <img src="images/fulls/NetflixERD.png" alt="Netflix ERD" width="350"> <br />
+                    <br />
+                    The database can be accessed here:<a href="https://www.kaggle.com/datasets/arnavsmayan/netflix-userbase-dataset" target="_blank"> https://www.kaggle.com/datasets/arnavsmayan/netflix-userbase-dataset</a> <br />
+                    
+				</section>
+
                 <!-- Two -->
 				<section id="two">
-						<h2>Summary of Findings</h2>
+						<h2>Executive Summary</h2>
 						<h4>Plan Type:</h4>
 						<ul>
 							<li>Basic plans are the most popular plan.</li>
 							<li>Near the end of June 2022 all plan types saw a significant spike and the basic plan type hit a high of $811.00. These spikes significantly decreased until the end of October 2022 when all plan types spiked again, and Premium and Standard plan types hit highs of $576.00 and $727.00 respectively.</li>
 							<li>All plan types seemed to drop off after this second spike completely.</li>
+							<img src="images/fulls/NetflixPlan.png" alt="Netflix Plan Types" width="700"> 
 						</ul>
 						<h4>Plan Country:</h4>
 						<ul>
 							<li>Spain and the US are the top two countries with subscription totals of $5,664 and $5,662 respectively.</li>
 							<li>Most countries followed the same spike and decrease pattern as the plan types (spikes in June 2022 and late October 2022) except France which hit its high in August 2022, and Germany which hit its high at the beginning of October 2022.</li>
+							<img src="images/fulls/NetflixCountry.png" alt="Netflix Country" width="700"> 
 						</ul>
 						<h4>Plan Device:</h4>
 						<ul>
 							<li>All four devices are evenly popular for Netflix Subscriptions, each getting a total of around $7,700.</li>
 							<li>The devices followed the same spike and decrease pattern as the other two graphs (spikes in June 2022 and late October 2022) with Smartphones and Tablets peaking in June, and Smart TVs and Laptops peaking in October.</li>
+							<img src="images/fulls/NetflixDeice.png" alt="Netflix Device Types" width="700"> 
 						</ul>
-						<h2>Recommended Next Steps</h2>
+						<h2>Recommended Next Steps For Company</h2>
 						<ul>
-							<li>Investigate why the people aren't joining in the months between June and October</li>
-							<li>Certain countries make up larger percentages of new subscriptions during different times of year, investigate why this may be the case.</li>
+							<strong>Budget Recommendations</strong>
+							<li>Allocate more budget for localized content and promotions in Spain and the US, given their strong subscription performance.</li>
+							<li>Increase the budget for marketing efforts and promotions during the months of june to october as these months had a significant dip in subscriptions.</li>
+							<strong>Device Related Recommendations</strong>
+							<li>Ensure the quality of the Netflix app is optimized across all devices, particularly Smartphones and Tablets, since they appear to lead subscriptions during the June peak.</li>
+							<li>Experiment with bundling strategies (offering discounts for multi-device users).</li>
+							<strong>Other Recommendations</strong>
+							<li>Analyze competitors activities during June and October to identify any overlaps with Netflix’s trends and adjust strategies accordingly.</li>
 						</ul>
-							<br />
+			
 				</section>
 
-                <!-- Three -->
-					<section id="three">
-						<h2>Database Information</h2>
-						<p> <b>Database:</b><a href="https://www.kaggle.com/datasets/arnavsmayan/netflix-userbase-dataset" target="_blank"> https://www.kaggle.com/datasets/arnavsmayan/netflix-userbase-dataset</a> <br />
-                            The dataset provides a snapshot of a sample Netflix userbase. It has the following columns:
-                            <ul>
-                                <li><b>User ID:</b> the ID of the user</li>   
-                                <li><b>Subscription Type:</b> Basic, Premium, and Standard </li>      
-                                <li><b>Monthly Revenue:</b> The amount of revenue from the users subscription(s)</li>
-                                <li><b>Join Date:</b> The date the user subscribed</li>
-                                <li><b>Last Payment Date:</b> The last time the user paid</li>
-                                <li><b>Country:</b> The country the user is in</li>
-                                <li><b>Age:</b> The age of the user </li>
-                                <li><b>Gender:</b> The gender of the user </li>  
-								<li><b>Device:</b> The device the subscription will be used. Laptop, Smart TV, Smartphone, and Tablet </li>
-                                <li><b>Plan Duration:</b> The duration of the plan the user selected </li>                                                                              
-                            </ul>
-                        </p>
-					</section>
+             
 			</div>
 
 		<!-- Footer -->
